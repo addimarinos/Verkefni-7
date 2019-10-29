@@ -61,7 +61,7 @@ function start() {
  * Þarf aðútfæra með lykkju og flæðisstýringum
  */
 function play() {
-  const random = 50;//randomNumber(0,100);
+  const random = randomNumber(0,100);
   var nrGuesses = 0;
 
   while(true) {
