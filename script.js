@@ -67,7 +67,7 @@ function play() {
   while(true) {
     let temp = prompt('Giskaðu á tölu sem er á milli 0 og 100');
     let guess = parseGuess(temp);
-    if(temp === null || guess === null) {
+    if(temp === null) {
       alert('Hætt í leik');
       return false;
     }
@@ -150,7 +150,7 @@ function parseGuess(input){
 function getResponse(guess, correct){
   // breyta guess og correct í heiltölur. 
 
-  if (guess < 0) { return 'Ekki rétt'; }
+  if (guess < 0 || guess === null) { return 'Ekki rétt'; }
   else if (guess === correct) { return 'Rétt'; }
 
   let abs = Math.abs(correct-guess);
